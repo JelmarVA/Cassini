@@ -13,13 +13,13 @@ struct Constants {
     
     static let NASA = [
         "Cassini" : "https://www.nasa.gov/centers/jpl/images/content/91882main_craft1-browse.jpg",
-        "Earth": "https://www.nasa.gov/sites/default/files/thumbnails/image/187_1003703_africa_dxm.png",
-        "Saturn": "https://www.nasa.gov/sites/default/files/images/394218main_PIA11667_full.jpg"
+        "Earth": "http://eoimages.gsfc.nasa.gov/images/imagerecords/78000/78314/VIIRS_3Feb2012_lrg.jpg",
+        "Saturn": "https://apod.nasa.gov/apod/image/0412/saturn_malmerCassini_5m.jpg"
     ]
     
-    static func NASAImageNamed(imageName: String?) -> URL? {
+    static func NASAImageNamed(imageName: String?) -> NSURL? {
         if let urlstring = NASA[imageName ?? ""] {
-            return URL(string: urlstring)
+            return NSURL(string: urlstring)
         }else {
             return nil
         }
